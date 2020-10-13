@@ -63,3 +63,9 @@ AWS에서 가장 먼저 생긴 리소스
 - 메시지가 있으면 바로 가져오고, 없으면 빠져 나옴
 - ReceiveMessage 요청에서 WaitTimeSeconds를 0으로 설정
 - Queue 설정에서 ReceiveMessageWaitTimeSeconds를 0으로 설정
+
+
+
+**[SQS(Simple queue service)]**
+
+- 분산환경, 트랜잭션이 완료가 되었다 안되었다를 알려주는 서비스
