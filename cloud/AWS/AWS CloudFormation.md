@@ -1,10 +1,14 @@
-AWS CloudFormation
+## AWS CloudFormation
 
-vagrant사용하니 vagrantfile로 코드로 서버를 올릴 수 있었음. infrastructure as code
+[infrastructure as code]
 
-ansible
+- vagrant사용하니 vagrantfile로 코드로 서버를 올릴 수 있었음. 
 
-클라우드 환경에서 사용할 수 있게 해주는 것이 AWS CloudFormation.
+- ansible
+
+
+
+클라우드 환경에서 infrastructure as code 사용할 수 있게 해주는 것이 AWS CloudFormation.
 
 이전에는 커스터마이징 되어있는 이미지를 사용함. AMI. 빠르게 인스턴스를 만들기 위함. 
 
