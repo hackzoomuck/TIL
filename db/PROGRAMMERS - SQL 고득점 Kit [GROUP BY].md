@@ -1,0 +1,52 @@
+## PROGRAMMERS - SQL 고득점 Kit [GROUP BY]
+
+
+
+- 고양이와 개는 몇 마리 있을까
+
+  ```
+  SELECT ANIMAL_TYPE, COUNT(ANIMAL_TYPE) count
+  FROM ANIMAL_INS
+  WHERE ANIMAL_TYPE = 'Cat' or ANIMAL_TYPE = 'Dog'
+  GROUP BY ANIMAL_TYPE
+  ORDER BY ANIMAL_TYPE
+  ```
+
+- 동명 동물 수 찾기
+
+  ```
+  SELECT NAME, COUNT(NAME)
+  FROM ANIMAL_INS
+  WHERE NAME IS NOT NULL
+  GROUP BY NAME
+  HAVING COUNT(NAME) >= 2
+  ORDER BY NAME
+  ```
+
+- 입양 시각 구하기(1)
+
+- ```
+  SELECT HOUR(DATETIME) HOUR, COUNT(HOUR(DATETIME)) COUNT
+  FROM ANIMAL_OUTS
+  GROUP BY HOUR
+  HAVING HOUR >=9 AND HOUR <=19
+  ORDER BY HOUR
+  ```
+
+- 입양 시각 구하기(2)
+
+  ```
+  # https://www.crocus.co.kr/1591
+  SET @HOUR = -1;
+  SELECT
+  (@HOUR := @HOUR +1) AS HOUR, 
+  (
+      SELECT COUNT(DATETIME) 
+      FROM ANIMAL_OUTS
+      WHERE HOUR(DATETIME) = @HOUR
+  ) AS COUNT
+  FROM ANIMAL_OUTS
+  WHERE @HOUR < 23
+  ```
+
+  
