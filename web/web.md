@@ -83,3 +83,15 @@ SOP로 보안을 강화하게 되면, api같은 서비스를 사용하는데 문
 => Access-Control-Allow-Orgin 응답 헤더를 이용해서 자원 사용 여부를 허가
 
 ![img](https://lh4.googleusercontent.com/-6DxxPmTCQrEZ_BqapZrbKAjkZEdB38S-UuiVoxdyIV6ifZhUZT91TU-CFwngGJfa3lT6Ay5hmmzgz1yX9QLs6eU69Y5ilmBobS_2eEOuA2Gcytzw7Ke2cZCm-vE2MBUt7VG0LaT)
+
+
+
+다른 도메인(서버)에서 리소스를 가져와서 쓸 수 있음. (교차, 기원, 요청이 가능한 구조)
+ajax통신으로 가져오는 데이터는 origin이 다르면 가져올 수는 있으나 쓸 수가 없음. 데이터는 가져오지만 메모리에 올릴 수가 없음.(SOP) =WEB2.0으로 messy up됨=> CORS(Access-Control-Allow-Orgin 응답 헤더)로 완화, api에서 가져올 때 우리 사이트의 정보를 등록하면 (Access-Control-Allow-Orgin 헤더에 등록됨)우리 사이트에 정보를 준다. 
+
+access token
+
+auth0로 인증을 수행함. auth0와 통신해서 우리 사이트를 등록하고, auth0는 키를 줌. access key로 auth0에 접근하면 내가 원하는 정보를 준다. (access key로 서비스를 이용한다.)
+
+스토리지에 토큰을 저장
+
