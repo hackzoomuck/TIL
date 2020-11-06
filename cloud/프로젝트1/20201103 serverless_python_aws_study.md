@@ -125,11 +125,10 @@ If your browser does not open automatically, please open the URL: https://portal
 
 Serverless: Press Enter to continue after creating an AWS account 
 
-If your browser does not open automatically, please open the URL: https://console.aws.amazon.com/iam/home?region=us-east-1#/users$new?step=final&accessKey&userNames=serverless&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
-
+If your browser does not open automatically, please open the URL: https://console.aws.amazon.com/iam/home?
 Serverless: Press Enter to continue after creating an AWS user with access keys 
-Serverless: AWS Access Key Id: AKIA2CBNEADHSZB43U6V
-Serverless: AWS Secret Access Key: ww2Xsavf7R6Pjzj1F6D5jzZ5wjXWNWpUyLp0QTcd
+Serverless: AWS Access Key Id: 
+Serverless: AWS Secret Access Key: 
 
 AWS credentials saved on your machine at ~/.aws/credentials. Go there to change them at any time.
 
@@ -205,11 +204,11 @@ If your browser does not open automatically, please open the URL: https://portal
 
 Serverless: Press Enter to continue after creating an AWS account 
 
-If your browser does not open automatically, please open the URL: https://console.aws.amazon.com/iam/home?region=us-east-1#/users$new?step=final&accessKey&userNames=serverless&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
+If your browser does not open automatically, please open the URL: https://console.aws.amazon.com/iam/home
 
 Serverless: Press Enter to continue after creating an AWS user with access keys 
-Serverless: AWS Access Key Id: AKIA2CBNEADHSZB43U6V
-Serverless: AWS Secret Access Key: ww2Xsavf7R6Pjzj1F6D5jzZ5wjXWNWpUyLp0QTcd
+Serverless: AWS Access Key Id: 
+Serverless: AWS Secret Access Key: 
 
 AWS credentials saved on your machine at ~/.aws/credentials. Go there to change them at any time.
 
@@ -228,15 +227,4 @@ You may uninstall it by running: serverless config tabcompletion uninstall
 https://www.serverless.com/blog/serverless-python-packaging
 
 ijieun@ijieun-ui-MacBookPro ~ % serverless create --template aws-python3 --name numpy-test --path numpy-test 
-Serverless: Generating boilerplate...
-Serverless: Generating boilerplate in "/Users/ijieun/numpy-test"
- _______                             __
-|   _   .-----.----.--.--.-----.----|  .-----.-----.-----.
-|   |___|  -__|   _|  |  |  -__|   _|  |  -__|__ --|__ --|
-|____   |_____|__|  \___/|_____|__| |__|_____|_____|_____|
-|   |   |             The Serverless Application Framework
-|       |                           serverless.com, v2.9.0
- -------'
-
-Serverless: Successfully generated boilerplate for template: "aws-python3"
 
