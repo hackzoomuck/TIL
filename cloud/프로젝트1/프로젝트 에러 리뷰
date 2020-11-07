@@ -1,0 +1,65 @@
+## 트러블 이슈
+
+------
+
+1.
+
+$$(venv) ijieun@ijieun-ui-MacBookPro pythonProject % python handler.py
+/Users/ijieun/PycharmProjects/pythonProject/venv/bin/python: can't open file '/Users/ijieun/PycharmProjects/pythonProject/handler.py': [Errno 2] No such file or directory
+
+해결책 : 
+
+<img src="/Users/ijieun/Library/Application Support/typora-user-images/스크린샷 2020-11-05 오전 10.27.50.png" alt="스크린샷 2020-11-05 오전 10.27.50" style="zoom:33%;" />
+
+pythonProject/numpy-test/handler.py가 존재하기에 python numpy-test/handler.py 로 호출해줍니다.
+
+
+
+2. 
+
+```
+(venv) ijieun@ijieun-ui-MacBookPro numpy-test % serverless deploy
+Serverless Error ---------------------------------------
+ 
+  An error occurred: IamRoleLambdaExecution - API: iam:CreateRole User: arn:aws:iam:::user/serverless is not authorized to perform: iam:CreateRole on resource: arn:aws:iam:::role/numpy-test-dev-us-east-1-lambdaRole with an explicit deny.
+ 
+  Get Support --------------------------------------------
+     Docs:          docs.serverless.com
+     Bugs:          github.com/serverless/serverless/issues
+     Issues:        forum.serverless.com
+ 
+  Your Environment Information ---------------------------
+     Operating System:          darwin
+     Node Version:              12.18.1
+     Framework Version:         2.9.0 (standalone)
+     Plugin Version:            4.1.1
+     SDK Version:               2.3.2
+     Components Version:        3.2.7
+ 
+(venv) ijieun@ijieun-ui-MacBookPro numpy-test % 
+```
+
+
+
+3. aws cli로 table 만들려고 했는데, aws 설정을 안해서 취소됨
+   해결법 : aws configure
+
+
+```
+ijieun@ijieun-ui-MacBookPro ~ % aws dynamodb create-table \
+--table-name product_table \
+--attribute-definitions \
+AttributeName=product_name,AttributeType=S \ 
+AttributeName=product_code,AttributeType=S \ 
+AttributeName=product_detail_page_link,AttributeType=S \ 
+AttributeName=product_image,AttributeType=S \ 
+AttributeName=category,AttributeType=S \ 
+AttributeName=product_manual_link,AttributeType=S \ 
+--key-schema \
+AttributeName=product_code,KeyType=HASH \
+AttributeName=category,KeyType=RANGE \
+--provisioned-throughput \
+ReadCapacityUnits=10,WriteCapacityUnits=5
+You must specify a region. You can also configure your region by running "aws configure".
+```
+
