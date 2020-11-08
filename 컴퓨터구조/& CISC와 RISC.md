@@ -11,8 +11,6 @@ CPU 아키텍처로 마이크로프로세서를 설계하는 방법
 
 
 
-![image-20201027174335558](C:\Users\LEEJ\AppData\Roaming\Typora\typora-user-images\image-20201027174335558.png)
-
 [참고링크]
 https://skagh.tistory.com/7
 https://frontalnh.github.io/2018/04/17/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0-risc-%EC%99%80-cisc-%EA%B5%AC%EC%A1%B0/
