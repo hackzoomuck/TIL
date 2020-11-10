@@ -63,3 +63,36 @@ ReadCapacityUnits=10,WriteCapacityUnits=5
 You must specify a region. You can also configure your region by running "aws configure".
 ```
 
+4.CreateTable 작업을 호출 할 때 오류 (ValidationException)가 발생했습니다. 하나 이상의 매개 변수 값이 잘못되었습니다. KeySchema의 속성 수가 AttributeDefinition에 정의 된 속성 수와 정확히 일치하지 않습니다.
+
+One or more parameter values are not valid. The AttributeValue for a key attribute cannot contain an empty string value. Key: product_code (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: ValidationException; 
+
+
+
+5. cloudsearch search api로 request 에러
+
+```
+{
+  "message": "Request forbidden by administrative rules",
+  "__type": "CloudSearchException"
+}
+```
+
+=> api 고정 날짜를 다르게 넣어줘서! 2013-01-01이 사용가능하다.
+Search endpoint url/2013-01-01/search?q=찾고 싶은 문자열
+
+
+
+6. Api gateway와 cloudsearch 연동
+
+   1. get method 생성
+      - integration type : http proxy
+      - http method : GET
+      - endpoint url : http://내 클라우드 서치 엔드포인트 url/**2013-01-01/search**
+
+   2. Query string parameters 활성화
+      - 'q' query string variable
+        1) method request : url querystring parameter 에 'q' 추가
+        2) integration request : url querystring parameter에 'q' 추가
+   3. CORS 활성화
+   4. 배포
