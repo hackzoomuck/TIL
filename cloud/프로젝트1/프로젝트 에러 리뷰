@@ -96,3 +96,23 @@ Search endpoint url/2013-01-01/search?q=찾고 싶은 문자열
         2) integration request : url querystring parameter에 'q' 추가
    3. CORS 활성화
    4. 배포
+
+
+
+7. api gateway 호출 에러
+
+   ```
+   {
+     "message": "Missing Authentication Token"
+   }
+   ```
+
+   https://내api_gateway_url/배포스테이지
+   로 호출하고 리소스를 뒤에 적어주지 않아서 
+
+   ```
+   Response headers에 x-amzn-errortype: MissingAuthenticationTokenException
+   ```
+
+   에러 발생.
+   => https://내api_gateway_url/배포스테이지/리소스명
